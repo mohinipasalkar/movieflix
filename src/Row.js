@@ -16,7 +16,7 @@ function Row({title, fetchUrl, isLargeRow}) {
 
         async function fetchData(){
             const request = await axios.get(fetchUrl);//("https://api.themoviedb.org/3/discover/tv?api_key=1f0ef76673bf50b9d919f2779f859697&with_networks=213");//
-            console.log(request);
+         //   console.log("here"+request.data.results);
             setMovies(request.data.results);
             return request;
         }

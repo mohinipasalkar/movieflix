@@ -3,6 +3,8 @@ import React, {useEffect, useState} from "react";
 import axios from './axios';
 import requests from './requests';
 
+import './Banner.css';
+
 const test= [{"abc":"pqr"},{"abc2":"pqr2"},{"abc3":"pqr3"}];
 
 function Banner() {
@@ -24,6 +26,11 @@ function Banner() {
         fetchData();
     },[]);
     console.log('movie is', movie);
+
+    function truncate(data,len) {
+        return data?.length > len ? data.substr(0,len-1) + "..." : data;
+    }
+
     return(
     <header className="banner"
         style={{
@@ -36,9 +43,7 @@ function Banner() {
     > {/* <<<BackgroundImage */}
         <div className="banner__contents">
         {/* title*/}
-            
-        {" "}
-        <h1>
+        <h1 className="banner__title">
             {movie?.title || movie?.name || movie?.original_name}
         </h1>
          {/* div > 2 buttons 
@@ -51,7 +56,7 @@ function Banner() {
         </div>
        
         {/* description */}
-        <h1 className="banner__description">{movie?.overview}</h1>
+        <h1 className="banner__description">{truncate (movie?.overview, 125)}</h1>
         </div>
     </header>
     )

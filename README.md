@@ -39,30 +39,21 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is implementing Netflix UI.
+Here, we have fetched TMDB(The Movie DB)'s api using axios.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For this you have to create account on TMDB which is completely free, where you will get a API KEY using that key in URL you can acces the API of TMDB.
 
-### Code Splitting
+Following APIs we need to create UI
+  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+  fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+  fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+  fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+  fetchDocumentaries: `discover/movie?api_key=${API_KEY}&with_genres=99`,
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
